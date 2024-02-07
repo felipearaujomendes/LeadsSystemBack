@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "LogSystem.Domain": {
+      "commandName": "Project",
+
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:58858;http://localhost:58859"
+    }
+  },
+  "SqlConnection": "Data Source=SQL8006.site4now.net;Initial Catalog=db_aa0b15_seguradora;User Id=db_aa0b15_seguradora_admin;Password=Socialmente123!!"
+}

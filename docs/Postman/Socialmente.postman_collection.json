@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "7781ee0f-4050-422b-afed-dde1951cd831",
+		"name": "Socialmente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Briefing",
+			"item": [
+				{
+					"name": "Adicionar Pergunta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"display\": \"Qual segmento sua empresa atende ?\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44301/api/pergunta",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44301",
+							"path": [
+								"api",
+								"pergunta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Perguntas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44301/api/pergunta",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44301",
+							"path": [
+								"api",
+								"pergunta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Pergunta por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44301/api/pergunta/0b8f7c5c-bf90-4c71-916d-cb4ed70990df",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44301",
+							"path": [
+								"api",
+								"pergunta",
+								"0b8f7c5c-bf90-4c71-916d-cb4ed70990df"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar Resposta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idPergunta\": \"0b8f7c5c-bf90-4c71-916d-cb4ed70990df\",\r\n  \"valor\": \"Bancario\",\r\n  \"tipoEntrada\": 1\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:44301/api/pergunta",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44301",
+							"path": [
+								"api",
+								"pergunta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Resposta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Resposta por Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,320 @@
+<app-menu></app-menu>
+<div class="container p-3">
+
+<div class="row justify-content-md-center">
+
+  <div class="row p-5 justify-content-md-center">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">edit</mat-icon>
+    <span> B R I E F I N G  |  S I T E S</span>
+  </div>
+  
+  <mat-vertical-stepper  #stepper>
+    <mat-step [stepControl]="firstFormGroup" label="Identificação" state="identificacao">
+      <form [formGroup]="firstFormGroup">
+        <div class="form-group">
+          
+          <section >
+              <h3> Iniciais</h3>
+          </section>
+          <hr>
+        </div>
+        <div class="row">
+          <mat-form-field class="example-full-width">
+            <mat-label>Cliente</mat-label>
+            <input  matInput placeholder="Digite o nome do cliente" formControlName="firstCtrl" >
+          </mat-form-field>
+        </div>
+        
+        <div class="row">
+          <mat-form-field class="example-full-width">
+            <mat-label>Responsável</mat-label>
+            <input matInput placeholder="Nome completo do responsável" formControlName="firstCtrl" >
+          </mat-form-field>
+        </div>
+        <div class="col-xs-4 text-right">
+          <button mat-mini-fab  color="primary" matStepperPrevious>
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button mat-mini-fab color="primary" matStepperNext>
+            <mat-icon>navigate_next</mat-icon>
+          </button>
+        </div>
+      </form>
+      <ng-template matStepperIcon="identificacao">
+        <mat-icon>fingerprint</mat-icon>
+      </ng-template>
+    </mat-step>
+    
+    <mat-step [stepControl]="firstFormGroup" label="Empresa" state="empresa">
+      <form [formGroup]="firstFormGroup">
+        <div class="form-group">
+          <section >
+            <h3>Descrição da empresa</h3>
+          </section>
+          <hr>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <mat-form-field class="example-full-width">
+              <mat-label>Segmento da empresa</mat-label>
+              <input matInput placeholder="Qual o segmento a empresa atua ?" formControlName="firstCtrl" >
+            </mat-form-field>
+          </div>
+        </div>
+            
+        <div class="form-group">
+          <div class="row">
+            <mat-form-field class="example-full-width">
+              <mat-label>Produtos</mat-label>
+              <input matInput placeholder="Descreva quais produtos empresa fornece." formControlName="firstCtrl" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <mat-form-field class="example-full-width">
+              <mat-label>Concorrentes</mat-label>
+              <input matInput placeholder="Principais concorrentes?" formControlName="firstCtrl" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <mat-form-field class="example-full-width">
+              <mat-label>Público alvo</mat-label>
+              <input matInput placeholder="Seu público alvo?" formControlName="firstCtrl" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-xs-4 text-right">
+          <button mat-mini-fab color="primary" matStepperPrevious>
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button mat-mini-fab color="primary" matStepperNext>
+            <mat-icon>navigate_next</mat-icon>
+          </button>
+        </div>
+      </form>
+      <ng-template matStepperIcon="empresa">
+        <mat-icon>store</mat-icon>
+      </ng-template>
+    </mat-step>
+
+  <mat-step [stepControl]="firstFormGroup" label="Site" state="site">
+    <form [formGroup]="firstFormGroup">
+      <div class="form-group">
+        <section >
+          <h3>Visual do site</h3>
+        </section>
+        <hr>
+      </div>
+        <div class="form-group">
+          <div class="form-check">
+            <div class="row">
+              <mat-radio-group class="example-full-width" name="estilo">
+                <mat-label><b>Qual estilo do site?</b></mat-label>
+                <div class="row">
+                  <section class="form-check">
+                      <mat-radio-button class="p-3" value="Tradicional" checked="true">Tradicional</mat-radio-button>
+                      <mat-radio-button class="p-3" value="Moderno">Moderno</mat-radio-button>
+                  </section>
+                </div>  
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <div class="row">
+              <mat-radio-group  class="example-full-width" name="material">
+                <mat-label><b>Já tem material?</b></mat-label>
+                <div class="row">
+                  <section class="form-check">
+                    <mat-checkbox class="p-3">Artes</mat-checkbox>
+                    <mat-checkbox class="p-3">Logo Marca</mat-checkbox>
+                    <mat-checkbox class="p-3">Folders</mat-checkbox>
+                  </section>
+                </div>
+              </mat-radio-group>
+            </div>
+          </div>
+        </div>
+       <div class="form-group"> 
+        <div class="form-check">
+          <div class="row">
+            <mat-radio-group class="example-full-width" name="alcance">
+              <mat-label><b>Alcance:</b> </mat-label>
+              <div class="row">
+                <section class="form-check">
+                  <mat-radio-button class="p-3" value="nacional" checked="true">Nacional</mat-radio-button>
+                  <mat-radio-button  class="p-3" value="internacional">Internacional</mat-radio-button>
+                </section>
+              </div>
+            </mat-radio-group>
+          </div>
+        </div> 
+       </div>
+       <div class="form-group">
+         <div class="form-check">
+           <div class="row">
+             <mat-radio-group class="example-full-width" name="formaDeContato">
+               <mat-label><b>Qual a forma de contato?</b></mat-label>
+               <div class="row">
+                 <section class="form-check">
+                   <mat-checkbox class="p-3">Telefone</mat-checkbox>
+                   <mat-checkbox class="p-3">Chat</mat-checkbox>
+                   <mat-checkbox class="p-3">Formulario</mat-checkbox>
+                 </section>
+               </div>
+             </mat-radio-group>
+           </div>
+         </div>
+       </div>
+
+       <div class="form-group">
+          <div class="form-check">
+                <div class="row">
+                  <mat-radio-group class="example-full-width" name="possuiHospedagem">
+                    <mat-label><b>Já possui hospedagem?</b> </mat-label>
+                    <div class="row">
+                      <section class="form-check">
+                        <mat-radio-button class="p-3" value="sim" >Sim</mat-radio-button>
+                        <mat-radio-button value="nao">Não</mat-radio-button>
+                      </section>
+                    </div>
+                  </mat-radio-group>
+              </div>
+          </div>
+          <div  class="row">
+            <mat-form-field class="example-full-width"> 
+              <mat-label>Responsável pelo conteúdo do site?</mat-label>
+              <input matInput placeholder="Nome do responsável pelo conteúdo do site" formControlName="firstCtrl" >
+            </mat-form-field>
+          </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <div class="row">
+            <mat-radio-group class="example-full-width" name="manutencao">
+              <mat-label><b>Frequência de manutenção:</b> </mat-label>
+              <div class="row">
+                <section class="form-check">
+                  <mat-radio-button class="p-3" value="baixa" checked="true">Baixa</mat-radio-button>
+                  <mat-radio-button class="p-3" value="media">Média</mat-radio-button>
+                  <mat-radio-button class="p-3" value="alta">Alta</mat-radio-button>
+                </section>
+              </div>
+            </mat-radio-group>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <div class="row">
+            <mat-radio-group class="example-full-width" name="integracaoRedeSociais">
+              <mat-label><b>Integração com redes sociais</b> </mat-label>
+              <div class="row">
+                <section class="form-check">
+                  <mat-radio-button class="p-3" value="sim">Sim</mat-radio-button>
+                  <mat-radio-button class="p-3" value="nao">Não</mat-radio-button>
+                </section>
+              </div>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="row">
+          <mat-form-field class="example-full-width">
+            <mat-label>Aprovação final</mat-label>
+            <input matInput placeholder="Nome do responsavel pela aprovação final do site" formControlName="firstCtrl" >
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-xs-4 text-right">
+        <button mat-mini-fab color="primary" matStepperPrevious>
+          <mat-icon>navigate_before</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" matStepperNext>
+          <mat-icon>navigate_next</mat-icon>
+        </button>
+      </div>
+      </form>
+
+      <ng-template matStepperIcon="site">
+        <mat-icon>important_devices</mat-icon>
+      </ng-template>
+
+      
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" label="Objetivos" state="objetivo">
+      <form [formGroup]="secondFormGroup">
+        <div class="form-group">
+          <div class="row">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Por que criar o site? </mat-label>
+              <textarea placeholder="Descreva o motivo e as intenções da criação do site" matInput></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Se tiver um site, quais são os maiores problemas dele</mat-label>
+              <textarea placeholder="Descreva quais são os maiores problemas do seu site hoje" matInput></textarea>
+            </mat-form-field>
+            <div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-xs-4 text-right">
+        <button mat-mini-fab color="primary" matStepperPrevious>
+          <mat-icon>navigate_before</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary" matStepperNext>
+          <mat-icon>navigate_next</mat-icon>
+        </button>
+      </div>
+      </form>
+      <ng-template matStepperIcon="objetivo">
+        <mat-icon>emoji_objects</mat-icon>
+      </ng-template>
+    </mat-step>
+
+    <mat-step [stepControl]="firstFormGroup" label="Finalizar" state="fim">  
+      <div class="form-group">
+        <section>
+          <h3>E é isso pessoal!</h3>
+          <p style="text-align: center;">Viu? nem doeu!! hehe</p>
+        </section>
+        <hr>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-4">
+          <div class="thumbnail">
+              <img src="../images/end.jpg" alt="Fim!" style="width:100%">
+          </div>
+        </div>
+       </div>
+      <div>
+        <div class="col-xs-4 p-2 text-right">
+              <button mat-mini-fab color="primary"  matStepperPrevious>
+                <mat-icon>navigate_before</mat-icon>
+              </button>
+              <button mat-mini-fab color="primary" matStepperNext>
+                <mat-icon>send</mat-icon>
+              </button>
+        </div>
+      </div>
+      <ng-template matStepperIcon="fim">
+        <mat-icon>check</mat-icon>
+      </ng-template>
+  </mat-step>
+  </mat-vertical-stepper>
+
+
+  <svg id="clouds" alt="Gray Clouds Background" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
+    <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
+  </svg>
+</div>
+<router-outlet></router-outlet>
